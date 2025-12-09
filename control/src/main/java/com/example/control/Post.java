@@ -15,10 +15,9 @@ public class Post {
     public Post() {
     }
 
-    public Post(String title, long id, int price, String message) {
+    public Post(String title, String author, String message) {
         this.title = title;
-        this.id = id;
-        this.price = price;
+        this.author = author;
         this.message = message;
     }
 

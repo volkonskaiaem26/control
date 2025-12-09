@@ -1,4 +1,10 @@
-curl -X POST localhost:8080/posts -H "Content-Type: application/json" -d "{\"title\" : \"title\", \"id\" : id, \"author\" : \"author\", \"message\" : \"message\"}"
+curl -X POST localhost:8080/posts -H "Content-Type: application/json" -d "{\"id\" : id,
+                                                                           \"title\" : \"title\",
+                                                                           \"price\" : price,
+                                                                           \"author\" : \"author\",
+                                                                           \"message\" : \"message\"
+                                                                           \"createdAt\" : \"year-month-date\"
+                                                                           \"updatedAt\" : \"year-month-date\"}"
 curl -X GET localhost:8080/posts
 curl -X GET localhost:8080/posts/{id}
 curl -X PUT localhost:8080/posts/{id} -H "Content-Type: application/json" -d "{\"title\" : \"title\", \"id\" : id, \"author\" : \"author\", \"message\" : \"message\"}"
