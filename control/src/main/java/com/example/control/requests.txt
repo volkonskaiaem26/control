@@ -10,3 +10,4 @@ curl -X GET localhost:8080/posts/latest
 curl -X GET localhost:8080/posts/cheapest
 curl -X GET localhost:8080/posts/expensive
 curl -X GET localhost:8080/posts/today
+curl -X GET localhost:8080/posts/search/{word}

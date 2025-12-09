@@ -33,4 +33,12 @@ public class Post {
     public int getPrice() {
         return price;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }

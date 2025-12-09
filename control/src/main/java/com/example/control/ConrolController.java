@@ -137,5 +137,13 @@ public class ConrolController {
         return ResponseEntity.ok(todayList);
     }
 
-
+    @GetMapping("/posts/search/{word}")
+    public ResponseEntity<Boolean> seachWord(@PathVariable String word){
+        for(Post post: posts){
+            if(post.getTitle().toLowerCase().contains(word.toLowerCase()) || post.getMessage().toLowerCase().contains(word.toLowerCase())){
+                return ResponseEntity.ok(true);
+            }
+        }
+        return  ResponseEntity.ok(false);
+    }
 }
