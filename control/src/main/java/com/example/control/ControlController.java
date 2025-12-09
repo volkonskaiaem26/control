@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 
 
 @RestController
-public class ConrolController {
+public class ControlController {
 
     List<Post> posts = new ArrayList<>();
 
@@ -138,7 +138,7 @@ public class ConrolController {
     }
 
     @GetMapping("/posts/search/{word}")
-    public ResponseEntity<Boolean> seachWord(@PathVariable String word){
+    public ResponseEntity<Boolean> searchWord(@PathVariable String word){
         for(Post post: posts){
             if(post.getTitle().toLowerCase().contains(word.toLowerCase()) || post.getMessage().toLowerCase().contains(word.toLowerCase())){
                 return ResponseEntity.ok(true);
